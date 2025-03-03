@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo "Pulling the latest code from GitHub..."
-if [ ! -d "SimpleOps" ]; then
-  git clone https://github.com/WillGle/SimpleOps.git
-else
-  git -C SimpleOps pull
-fi
+# echo "Pulling the latest code from GitHub..."
+# if [ ! -d "SimpleOps" ]; then
+#   git clone https://github.com/WillGle/SimpleOps.git
+# else
+#   git -C SimpleOps pull
+# fi
 
 echo "Starting services with Docker Compose..."
 docker compose up -d --build
