@@ -8,7 +8,7 @@ else
 fi
 
 echo "Starting services with Docker Compose..."
-docker-compose up -d --build
+docker compose up -d --build
 
 echo "SimpleOps system is running! Access services at:"
 echo " - GitLab: http://localhost:8080"
