@@ -1,34 +1,36 @@
 # Ignore database & service data
 services/gitlab/gitlab_data/
 services/jenkins/jenkins_home/
-services/postgresql/data/
 services/sonarqube/sonarqube_data/
 services/gitlab-runner/config.toml
 services/gitlab-runner/.runner
-services/**/config.toml
 services/**/data/
-services/**/logs/
 services/**/volumes/
-
-# Ignore monitoring configuration (if sensitive)
-services/monitoring/prometheus/prometheus.yml
-services/monitoring/loki/config.yml
 
 # Ignore logs & temporary files
 *.log
 logs/
 tmp/
-**/logs/
-**/tmp/
+services/**/logs/
+services/**/tmp/
 
+# Ignore monitoring configuration (if sensitive)
+services/monitoring/prometheus/prometheus.yml
+services/monitoring/loki/config.yml
+services/monitoring/grafana/provisioning/
 
 # Ignore compiled files & system files
 __pycache__/
 .vscode/
+.idea/
 .DS_Store
+*.swp  # Ignore Vim swap files
 
 # Ignore Docker-related files
 .env
 docker-compose.override.yml
+docker-compose*.yml
 trusted-certs-directory-hash
+
+# Keep .gitignore in service directories
 !services/**/.gitignore
