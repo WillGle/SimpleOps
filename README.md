@@ -49,9 +49,12 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
+Default URL
+```bash
 GitLab	http://localhost:8080
 Jenkins	http://localhost:8081
 SonarQube	http://localhost:9000
 Prometheus	http://localhost:9090
 Loki	http://localhost:3100
 Grafana	http://localhost:3000
+```
